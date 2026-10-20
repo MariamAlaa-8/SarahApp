@@ -46,7 +46,7 @@ export async function sendEmail({
             html,
             attachments
         })
-        console.log("Message sent: %s", info.messageId)
+
         return info
     } catch (err) {
         console.log("Error while sending mail:", err)
