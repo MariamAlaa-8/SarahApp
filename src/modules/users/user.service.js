@@ -62,10 +62,8 @@ export const profileCached = async (account) => {
     const cacheKey = `User::${userId}:Profile`;
     const cachedProfile = await get({ key: cacheKey });
     if (cachedProfile) {
-        console.log(" Profile from Redis Cache Hit");
         return cachedProfile;
     }
-    console.log(" Profile from MongoDB Cache Miss");
     await set({
         key: cacheKey,
         value: account,
