@@ -49,7 +49,7 @@ export async function sendEmail({
 
         return info
     } catch (err) {
-        console.log("Error while sending mail:", err)
+
         throw err
     }
 }
